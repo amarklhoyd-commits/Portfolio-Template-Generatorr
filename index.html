@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FolioVerse — Create. Showcase. Grow.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" data-page="home"><span class="brand-mark">F</span> FolioVerse</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+  <nav id="mainNav">
+    <a href="#home" data-page="home" class="nav-link active">HOME</a>
+    <a href="#templates" data-page="templates" class="nav-link">TEMPLATE</a>
+    <a href="#features" data-page="features" class="nav-link">FEATURES</a>
+    <a href="#portfolio" data-page="portfolio" class="nav-link">MY PORTFOLIO</a>
+  </nav>
+  <div class="nav-actions"><button class="btn btn-outline btn-small" id="loginBtn">Log In</button><button class="btn btn-primary btn-small" id="createBtn">Create Portfolio <span>↗</span></button></div>
+</header>
+
+<main>
+<section class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="live-dot"></span> YOUR STORY, BEAUTIFULLY TOLD</div>
+      <h1>Turn Your Ideas Into a <span>Professional Portfolio.</span></h1>
+      <p>Build, customize, and showcase your work with a portfolio that feels like you. Choose from three unique templates and bring your skills to life.</p>
+      <div class="hero-actions"><button class="btn btn-primary" id="heroCreate">Create Portfolio <span>→</span></button><button class="btn btn-dark-outline" data-go="templates">Explore Templates</button></div>
+      <div class="social-proof"><div class="avatar-stack"><i>J</i><i>M</i><i>A</i></div><span><b>Made for your next big thing.</b><br><small>Students · Creators · Professionals</small></span></div>
+    </div>
+    <div class="hero-art">
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+      <div class="float-chip chip-top">✦ Your next chapter</div>
+      <div class="mock-card mock-back"><div class="mock-bar"></div><div class="mock-line wide"></div><div class="mock-line"></div><div class="mock-grid"><i></i><i></i><i></i></div></div>
+      <div class="mock-card mock-front"><div class="mock-profile"><div class="portrait">JD</div><div><b>Jordan Davis</b><small>Designer & Developer</small></div></div><h3>Designing ideas<br>into <span>reality.</span></h3><div class="mock-tags"><i>UI / UX</i><i>Web Design</i><i>Code</i></div><div class="mock-footer">Selected work <b>↗</b></div></div>
+      <div class="float-chip chip-bottom">✳ Made to stand out</div>
+    </div>
+  </div>
+  <div class="quick-stats">
+    <div><span class="stat-icon purple">✦</span><b>3 Unique Templates</b><small>Designed for different styles</small></div>
+    <div><span class="stat-icon blue">☁</span><b>Online Database</b><small>Your work saved in the cloud</small></div>
+    <div><span class="stat-icon green">↗</span><b>Easy to Use</b><small>Create a portfolio in minutes</small></div>
+  </div>
+  <section class="section-block">
+    <div class="section-heading"><div><div class="eyebrow">FIND YOUR STYLE</div><h2>One platform. <span>Three vibes.</span></h2></div><button class="text-link" data-go="templates">View all templates ↗</button></div>
+    <div class="template-grid" id="homeTemplateGrid"></div>
+  </section>
+</section>
+
+<section class="page" id="page-templates">
+  <div class="page-heading"><div><div class="eyebrow">MADE FOR YOUR WORK</div><h1>Choose your <span>template.</span></h1><p>Pick a design that fits your style. You can change it any time.</p></div><button class="btn btn-outline" data-go="home">← Back Home</button></div>
+  <div class="template-grid large" id="templateGrid"></div>
+</section>
+
+<section class="page" id="page-features">
+  <div class="feature-hero"><div class="eyebrow">EVERYTHING IN ONE PLACE</div><h1>Why choose <span>FolioVerse?</span></h1><p>Simple tools to create, manage, and share a portfolio you are proud of.</p><div class="feature-orb">✦</div></div>
+  <div class="feature-grid">
+    <article class="feature-card"><span class="feature-icon purple">✎</span><h3>Easy Portfolio Creation</h3><p>Fill in your information using a simple step-by-step form.</p></article>
+    <article class="feature-card"><span class="feature-icon green">◈</span><h3>3 Unique Templates</h3><p>Choose Simple, Modern, or Creative to match your personality.</p></article>
+    <article class="feature-card"><span class="feature-icon blue">☁</span><h3>Cloud Database</h3><p>With Supabase connected, your saved portfolios are stored online.</p></article>
+    <article class="feature-card"><span class="feature-icon yellow">◉</span><h3>Live Preview</h3><p>Preview your portfolio before you publish or share it.</p></article>
+    <article class="feature-card"><span class="feature-icon pink">✎</span><h3>Edit & Delete</h3><p>Update your information or remove portfolios when needed.</p></article>
+    <article class="feature-card"><span class="feature-icon violet">▣</span><h3>Responsive Design</h3><p>Your pages adapt to desktop, tablet, and mobile screens.</p></article>
+  </div>
+  <div class="cta-banner"><div><div class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</div><h2>Your dream portfolio is a few clicks away.</h2></div><button class="btn btn-primary" id="featureCreate">Create My Portfolio →</button></div>
+</section>
+
+<section class="page" id="page-portfolio">
+  <div class="page-heading"><div><div class="eyebrow">YOUR PERSONAL WORKSPACE</div><h1>My <span>portfolios.</span></h1><p>View, edit, preview, or change the template for your saved work.</p></div><button class="btn btn-primary" id="newPortfolioBtn">＋ Create New</button></div>
+  <div class="portfolio-grid" id="portfolioGrid"></div>
+  <div class="empty-state hidden" id="emptyState"><div class="empty-icon">✦</div><h2>Your next big thing starts here.</h2><p>You haven't created a portfolio yet. Let's build your first one.</p><button class="btn btn-primary" id="emptyCreate">Create Your First Portfolio →</button></div>
+</section>
+
+<section class="page" id="page-login">
+  <div class="auth-wrap"><div class="auth-art"><div class="auth-logo"><span class="brand-mark">F</span> FolioVerse</div><div class="auth-illustration">F<span>V</span></div><h2>Create. Showcase. Grow.</h2><p>Everything you need to turn your work into a story worth sharing.</p></div><div class="auth-form"><button class="back-link" data-go="home">← Back to home</button><div class="eyebrow">WELCOME BACK</div><h1 id="authTitle">Log in to FolioVerse</h1><p id="authSubtitle">Your portfolio journey continues here.</p><form id="authForm"><label>Email address<input type="email" id="authEmail" placeholder="you@example.com" required></label><label>Password<input type="password" id="authPassword" placeholder="At least 6 characters" minlength="6" required></label><button class="btn btn-primary full" id="authSubmit">Log In →</button></form><p class="auth-switch" id="authSwitch">New to FolioVerse? <button id="switchAuth">Create an account</button></p><div class="demo-note">Demo mode: without Supabase configured, login is simulated in this browser only.</div></div></div>
+</section>
+
+<section class="page" id="page-editor">
+  <div class="editor-heading"><button class="back-link" data-go="portfolio">← Back to My Portfolio</button><div class="step-label">PORTFOLIO BUILDER <span>•</span> STEP 1 OF 2</div><h1 id="editorTitle">Create your portfolio</h1><p>Add your details below. You can preview everything before saving.</p></div>
+  <form id="portfolioForm" class="editor-layout">
+    <aside class="editor-steps"><div class="step active"><i>1</i> Personal Info</div><div class="step"><i>2</i> Education</div><div class="step"><i>3</i> Skills</div><div class="step"><i>4</i> Projects</div><div class="step"><i>5</i> Experience</div><div class="step"><i>6</i> Social Links</div><div class="step-hint">Your information is used only for your portfolio.</div></aside>
+    <div class="form-panel">
+      <div class="form-section"><h2>Personal information</h2><p class="muted">Start with the basics so people know who you are.</p>
+        <div class="form-row"><label>Full name *<input id="fullName" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ '’\-]*" title="Use letters, spaces, apostrophes, or hyphens only. Numbers and @ are not allowed." autocomplete="name" placeholder="e.g. Jordan Davis"><small>Use your name without numbers or @ symbols.</small></label><label>Professional title<input id="jobTitle" placeholder="e.g. Web Developer"></label></div>
+        <div class="form-row"><label>Email address *<input id="email" type="email" required autocomplete="email" pattern="[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+" title="Enter a valid email address, such as name@example.com." placeholder="you@example.com"></label><label>Contact number<input id="phone" placeholder="+63 912 345 6789"></label></div>
+        <label>Address<input id="address" placeholder="City, Country"></label>
+        <div class="photo-upload-field"><label for="photo">Profile picture <input id="photo" type="file" accept="image/*"><small>Choose an image from your device (JPG, PNG, GIF, or WebP; up to 2 MB).</small></label><div id="photoPreviewWrap" class="photo-upload-preview hidden"><img id="photoPreviewImage" alt="Selected profile picture preview"><button type="button" id="removePhotoBtn" class="btn btn-outline btn-small">Remove photo</button></div></div>
+        <label>About me *<textarea id="about" rows="4" required placeholder="Tell people about yourself, your interests, and your goals..."></textarea></label>
+      </div>
+      <div class="form-section"><h2>Education & skills</h2><div class="form-row"><label>Educational background<textarea id="education" rows="3" placeholder="School, course, year, achievements"></textarea></label><label>Skills<textarea id="skills" rows="3" placeholder="HTML, CSS, JavaScript, teamwork..."></textarea><small>Separate skills with commas.</small></label></div></div>
+      <div class="form-section"><h2>Projects & experience</h2><label>Projects<textarea id="projects" rows="3" placeholder="Project name — what you built and what tools you used"></textarea></label><label>Work experience<textarea id="experience" rows="3" placeholder="Role, organization, dates, responsibilities"></textarea></label></div>
+      <div class="form-section"><h2>Social links</h2><div class="form-row"><label>Website / LinkedIn<input id="website" type="url" placeholder="https://..."></label><label>GitHub<input id="github" type="url" placeholder="https://github.com/..."></label></div></div>
+      <div class="form-footer"><button type="button" class="btn btn-outline" data-go="portfolio">Cancel</button><button type="submit" class="btn btn-primary">Continue to templates →</button></div>
+    </div>
+  </form>
+</section>
+
+<section class="page" id="page-select">
+  <div class="page-heading"><div><div class="eyebrow">STEP 2 OF 2</div><h1>Select a <span>template.</span></h1><p>Choose a design for your portfolio. Your details will stay the same.</p></div><button class="btn btn-outline" data-go="editor">← Back to details</button></div>
+  <div class="template-grid large" id="selectGrid"></div>
+  <div class="select-footer"><span id="selectedMessage">Selected: Modern</span><button class="btn btn-primary" id="previewBtn">Preview Portfolio →</button></div>
+</section>
+
+<section class="page" id="page-preview">
+  <div class="page-heading"><div><div class="eyebrow">YOUR WORK, YOUR WAY</div><h1>Portfolio <span>preview.</span></h1><p>This is how your portfolio will look with the selected template.</p></div><button class="btn btn-outline" data-go="select">← Back to templates</button></div>
+  <div class="preview-toolbar"><span id="previewTemplateName">Modern Template</span><div><button class="btn btn-outline btn-small" id="changeTemplateBtn">Change Template</button><button class="btn btn-primary btn-small" id="savePortfolioBtn">Save Portfolio ✓</button></div></div>
+  <div id="portfolioPreview" class="portfolio-preview"></div>
+</section>
+</main>
+
+<footer><a class="brand" href="#" data-page="home"><span class="brand-mark">F</span> FolioVerse</a><span>Made to help your next chapter begin.</span><span>© 2026 FolioVerse</span></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html>
